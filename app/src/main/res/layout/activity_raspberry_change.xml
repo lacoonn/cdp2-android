@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:weightSum="6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/colorButton"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Raspberry"
+            android:textColor="@color/colorText"
+            android:textSize="40dp" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/field_raspberry_previous"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:hint="Previous Raspberry"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorHintText"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/field_raspberry_change"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_edittext"
+            android:hint="@string/prompt_raspberry_change"
+            android:imeOptions="actionGo"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorHintText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/field_raspberry_previous" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <Button
+            android:id="@+id/button_raspberry_change_execute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/colorButton"
+            android:text="Change"
+            android:textColor="@color/colorText" />
+    </LinearLayout>
+
+</LinearLayout>
